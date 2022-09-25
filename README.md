@@ -1,9 +1,10 @@
 
-This repository contains refactored backend of the addonis-telerik-graduate-project.
+# This repository contains refactored Bgiackend of the addonis-telerik-graduate-project.
+(Still no front end is available)
 
 In order to start the application Docker Desktop is needed to instantiate the containers. Also, bootRun the application.
 
-![img_9.png](img_9.png)
+![img_9.png](readme_images/img_9.png)
 
 
 # Brief description:  
@@ -17,7 +18,7 @@ In order to start the application Docker Desktop is needed to instantiate the co
 PostgreSQL and Keycloak containers in Docker Desktop  
 </br>
 
-   ![img.png](img.png)
+   ![img.png](readme_images/img.png)
    </br></br>
 
 Keycloak admin console  
@@ -31,30 +32,30 @@ Keycloak admin console
 - Status code 200
   </br></br>
 
-   ![img_1.png](img_1.png)
+   ![img_1.png](readme_images/img_1.png)
 
 # Restricted endpoint preview 
 
 - Returns status code 200 in Postman, because it actually returns the Log in page, but the resource is NOT available without authentication
   </br></br>    
-   ![img_4.png](img_4.png)
+   ![img_4.png](readme_images/img_4.png)
     
-   ![img_3.png](img_3.png)
+   ![img_3.png](readme_images/img_3.png)
   </br></br>
 
 - Must authenticate to obtain the resource (user: ivan, password: ivan)
   </br></br>
 
-   ![img_6.png](img_6.png)
+   ![img_6.png](readme_images/img_6.png)
   </br></br>
 
 - Another option to obtain the resource from the application is to use JWT (OpenId Connect)
 </br></br>
 
   (Obtain access token)
-   ![img_7.png](img_7.png)
+   ![img_7.png](readme_images/img_7.png)
   </br></br>
 
   (Use obtained JWT for authentication)
 </br></br>
-![img_8.png](img_8.png) 
+![img_8.png](readme_images/img_8.png) 
