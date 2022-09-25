@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="12345" author="ivanZ">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="username" value="admin"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="admin@mail.com"/>
+            <column name="phone" value="0111111111"/>
+            <column name="photo"/>
+            <column name="enabled" value="true"/>
+            <column name="admin" value="true"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="username" value="user1"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user1@mail.com"/>
+            <column name="phone" value="0222222222"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="3"/>
+            <column name="username" value="user2"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user2@mail.com"/>
+            <column name="phone" value="0333333333"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="4"/>
+            <column name="username" value="user3"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user3@mail.com"/>
+            <column name="phone" value="0444444444"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="5"/>
+            <column name="username" value="user4"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user4@mail.com"/>
+            <column name="phone" value="05555555555"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="6"/>
+            <column name="username" value="user5"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user5@mail.com"/>
+            <column name="phone" value="0666666666"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="7"/>
+            <column name="username" value="user6"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user6@mail.com"/>
+            <column name="phone" value="0777777777"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="8"/>
+            <column name="username" value="user7"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user7@mail.com"/>
+            <column name="phone" value="0888888888"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="9"/>
+            <column name="username" value="user8"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user8@mail.com"/>
+            <column name="phone" value="09999999"/>
+            <column name="photo" />
+            <column name="enabled" value="true"/>
+            <column name="admin" value="false"/>
+        </insert>
+        <insert tableName="users">
+            <column name="id" value="10"/>
+            <column name="username" value="user9"/>
+            <column name="password" value="aA!12345678"/>
+            <column name="email" value="user9@mail.com"/>
+            <column name="phone" value="09999990"/>
+            <column name="photo" />
+            <column name="enabled" value="false"/>
+            <column name="admin" value="false"/>
+        </insert>
+
+        <insert tableName="ides">
+            <column name="id" value="1"/>
+            <column name="name" value="IntelliJ"/>
+        </insert>
+        <insert tableName="ides">
+            <column name="id" value="2"/>
+            <column name="name" value="PhpStorm"/>
+        </insert>
+        <insert tableName="ides">
+            <column name="id" value="3"/>
+            <column name="name" value="Visual Studio"/>
+        </insert>
+        <insert tableName="ides">
+            <column name="id" value="4"/>
+            <column name="name" value="Visual Studio Code"/>
+        </insert>
+
+        <insert tableName="statuses">
+            <column name="id" value="1"/>
+            <column name="name" value="Approved"/>
+        </insert>
+        <insert tableName="statuses">
+            <column name="id" value="2"/>
+            <column name="name" value="Pending"/>
+        </insert>
+
+        <insert tableName="tags">
+            <column name="id" value="1"/>
+            <column name="name" value="Tag1"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="2"/>
+            <column name="name" value="Tag2"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="3"/>
+            <column name="name" value="Tag3"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="4"/>
+            <column name="name" value="Tag4"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="5"/>
+            <column name="name" value="Tag5"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="6"/>
+            <column name="name" value="Tag6"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="7"/>
+            <column name="name" value="Tag7"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="8"/>
+            <column name="name" value="Tag8"/>
+        </insert>
+        <insert tableName="tags">
+            <column name="id" value="9"/>
+            <column name="name" value="Tag9"/>
+        </insert>
+
+        <insert tableName="github_data">
+            <column name="id" value="1"/>
+            <column name="pulls_count" value="15"/>
+            <column name="open_issues_count" value="393"/>
+            <column name="last_commit_date" value="2021-10-28"/>
+            <column name="last_commit_tittle" value="Merge pull request #2642 from Taysser-Gherfal/VS_Marketplace_Page_Updates
+
+Updating VS Market place content to support VS2022 launch"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="2"/>
+            <column name="pulls_count" value="9"/>
+            <column name="open_issues_count" value="226"/>
+            <column name="last_commit_date" value="2021-12-09"/>
+            <column name="last_commit_tittle" value="SAM Lambda ARM support (#2997)"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="3"/>
+            <column name="pulls_count" value="101"/>
+            <column name="open_issues_count" value="1324"/>
+            <column name="last_commit_date" value="2021-12-09"/>
+            <column name="last_commit_tittle" value="Merge #8045
+
+8045: Fix auto-import in `include!`-ed files r=Undin a=dima74
+
+Fixes #8037
+
+changelog: Fix auto-import in `include!`-ed files
+
+
+Co-authored-by: Dmitry Murzin diralik@yandex.ru"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="4"/>
+            <column name="pulls_count" value="2"/>
+            <column name="open_issues_count" value="105"/>
+            <column name="last_commit_date" value="2021-02-14"/>
+            <column name="last_commit_tittle" value="Merge pull request #271 from cedricziel/actions-build"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="5"/>
+            <column name="pulls_count" value="2"/>
+            <column name="open_issues_count" value="2"/>
+            <column name="last_commit_date" value="2021-12-02"/>
+            <column name="last_commit_tittle" value="Merged branch idea213.release into idea213.x"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="6"/>
+            <column name="pulls_count" value="2"/>
+            <column name="open_issues_count" value="2"/>
+            <column name="last_commit_date" value="2021-12-02"/>
+            <column name="last_commit_tittle" value="Merged branch idea213.release into idea213.x"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="7"/>
+            <column name="pulls_count" value="1"/>
+            <column name="open_issues_count" value="9"/>
+            <column name="last_commit_date" value="2021-10-31"/>
+            <column name="last_commit_tittle" value="Update changelog"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="8"/>
+            <column name="pulls_count" value="0"/>
+            <column name="open_issues_count" value="29"/>
+            <column name="last_commit_date" value="2021-04-28"/>
+            <column name="last_commit_tittle" value="-"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="9"/>
+            <column name="pulls_count" value="12"/>
+            <column name="open_issues_count" value="140"/>
+            <column name="last_commit_date" value="2021-05-02"/>
+            <column name="last_commit_tittle" value="Bump org.jetbrains.intellij from 0.6.5 to 0.7.3 (#1033)
+
+Bumps org.jetbrains.intellij from 0.6.5 to 0.7.3.
+
+Signed-off-by: dependabot-preview[bot] support@dependabot.com
+
+Co-authored-by: dependabot-preview[bot] 27856297+dependabot-preview[bot]@users.noreply.github.com"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="10"/>
+            <column name="pulls_count" value="13"/>
+            <column name="open_issues_count" value="551"/>
+            <column name="last_commit_date" value="2021-11-21"/>
+            <column name="last_commit_tittle" value="build 0.23.213"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="11"/>
+            <column name="pulls_count" value="6"/>
+            <column name="open_issues_count" value="76"/>
+            <column name="last_commit_date" value="2021-11-28"/>
+            <column name="last_commit_tittle" value="Issue914 (#922)
+
+* Fix issue #914
+
+* Adding Linux safety belt
+
+* SA error fixed"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="12"/>
+            <column name="pulls_count" value="3"/>
+            <column name="open_issues_count" value="52"/>
+            <column name="last_commit_date" value="2020-03-24"/>
+            <column name="last_commit_tittle" value="Merge pull request #289 from tomasr/develop
+
+v4.3 release merge"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="13"/>
+            <column name="pulls_count" value="0"/>
+            <column name="open_issues_count" value="0"/>
+            <column name="last_commit_date" value="2021-12-09"/>
+            <column name="last_commit_tittle" value="fix bug: can not show encoding of html file. (issue #1)"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="14"/>
+            <column name="pulls_count" value="4"/>
+            <column name="open_issues_count" value="937"/>
+            <column name="last_commit_date" value="2021-12-10"/>
+            <column name="last_commit_tittle" value="A few more loc string fixes (#8513)"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="15"/>
+            <column name="pulls_count" value="9"/>
+            <column name="open_issues_count" value="417"/>
+            <column name="last_commit_date" value="2018-01-19"/>
+            <column name="last_commit_tittle" value="Update README.md"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="16"/>
+            <column name="pulls_count" value="12"/>
+            <column name="open_issues_count" value="140"/>
+            <column name="last_commit_date" value="2021-05-02"/>
+            <column name="last_commit_tittle" value="Bump org.jetbrains.intellij from 0.6.5 to 0.7.3 (#1033)
+
+Bumps org.jetbrains.intellij from 0.6.5 to 0.7.3.
+
+Signed-off-by: dependabot-preview[bot] support@dependabot.com
+
+Co-authored-by: dependabot-preview[bot] 27856297+dependabot-preview[bot]@users.noreply.github.com"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="17"/>
+            <column name="pulls_count" value="0"/>
+            <column name="open_issues_count" value="29"/>
+            <column name="last_commit_date" value="2021-04-28"/>
+            <column name="last_commit_tittle" value="-"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="18"/>
+            <column name="pulls_count" value="3"/>
+            <column name="open_issues_count" value="5"/>
+            <column name="last_commit_date" value="2021-12-01"/>
+            <column name="last_commit_tittle" value="chore: release 1.2.4 (#110)"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="19"/>
+            <column name="pulls_count" value="10"/>
+            <column name="open_issues_count" value="407"/>
+            <column name="last_commit_date" value="2021-12-10"/>
+            <column name="last_commit_tittle" value="fix(workspace): tutorial initializer with existing ws in default paths (#1873)"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="20"/>
+            <column name="pulls_count" value="1"/>
+            <column name="open_issues_count" value="159"/>
+            <column name="last_commit_date" value="2021-12-06"/>
+            <column name="last_commit_tittle" value="Actualize description"/>
+        </insert>
+        <insert tableName="github_data">
+            <column name="id" value="21"/>
+            <column name="pulls_count" value="271"/>
+            <column name="open_issues_count" value="6"/>
+            <column name="last_commit_date" value="2021-12-10"/>
+            <column name="last_commit_tittle" value="Support handlebars templates per config file
+
+fixes #1070"/>
+        </insert>
+
+        <insert tableName="addons">
+            <column name="id" value="1"/>
+            <column name="name" value="GitHub Extension"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="2"/>
+            <column name="description" value="GitHub Extension for Visual Studio
+
+Visual Studio 2022 now includes the functionality from this extension out of the box. We recommend downloading Visual Studio 2022 to get the best experience.
+
+This GitHub Extension enhances Visual Studio 2015 and Visual Studio 2017 by making it easy to connect to and work with your repositories on GitHub and GitHub Enterprise. Clone existing repositories or create new ones and start collaborating!
+
+For more information about the extension, visit https://visualstudio.github.com/.
+
+For feedback and bug reports, please email support@github.com."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/github/VisualStudio"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="1"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="111"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-08"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="2"/>
+            <column name="name" value="AWS Toolkit"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="2"/>
+            <column name="description" value="The AWS Toolkit for JetBrains makes it easier to write applications built on Amazon Web Services."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/aws/aws-toolkit-jetbrains"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="2"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="100"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-08"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="3"/>
+            <column name="name" value="Rust"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="2"/>
+            <column name="description" value="Rust language support."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/intellij-rust/intellij-rust"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="3"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="99"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-08"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="4"/>
+            <column name="name" value="Laravel"/>
+            <column name="ide_id" value="3"/>
+            <column name="creator_id" value="3"/>
+            <column name="description" value="Laravel plugin.
+Install:
+Install plugin and active it per Project under Settings > Languages Frameworks > PHP > Laravel
+            Use Laravel IDE Helper Generator to generate ide classes
+            Configure root Views directory, if not using default file structure
+            (Enable autopopup for completion in plugin setting)"/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/Haehnchen/idea-php-laravel-plugin"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="4"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="77"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-08"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="5"/>
+            <column name="name" value="Scala"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="3"/>
+            <column name="description" value="Adds support for the Scala language. "/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/JetBrains/intellij-scala"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="5"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="55"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-08"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="6"/>
+            <column name="name" value="Key Promoter X"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="3"/>
+            <column name="description" value="The Key Promoter X helps you to learn essential shortcuts while you are working. When you use the mouse on a button inside the IDE, the Key Promoter X shows you the keyboard shortcut that you should have used instead. This provides an easy way to learn how to replace tedious mouse work with keyboard keys and helps to transition to a faster, mouse free development. The Key Promoter X tool window shows you a hit-list of the mouse actions you use the most and directly provides you with the shortcut you can use instead. For buttons that don''t have a shortcut, the Key Promoter X prompts you with the possibility to directly create one."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/halirutan/IntelliJ-Key-Promoter-X"/>
+            <column name="featured" value="1"/>
+            <column name="github_data_id" value="6"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="91"/>
+            <column name="total_score" value="15"/>
+            <column name="total_voters" value="4"/>
+            <column name="upload_date" value="2021-12-09"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="7"/>
+            <column name="name" value="RestfulTool"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="4"/>
+            <column name="description" value="A set of auxiliary tools for Restful service development
+Provides a display window of Services tree
+Double click the URL to jump directly to the corresponding method definition
+A simple http apiService tool
+Support Spring system (Spring MVC / Spring Boot)
+Support JAX-RS
+Support `Navigate-> Request Service` search Mapping (Ctrl + Alt + /)."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/ZhangYuanSheng1217/RestfulTool"/>
+            <column name="featured" value="1"/>
+            <column name="github_data_id" value="16"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="4"/>
+            <column name="total_score" value="15"/>
+            <column name="total_voters" value="4"/>
+            <column name="upload_date" value="2021-12-09"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="8"/>
+            <column name="name" value="Lombok"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="4"/>
+            <column name="description" value="A plugin that adds first-class support for Project Lombok
+
+Features
+@Getter and @Setter
+@FieldNameConstants
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor, @RequiredArgsConstructor and @NoArgsConstructor
+@Log, @Log4j, @Log4j2, @Slf4j, @XSlf4j, @CommonsLog, @JBossLog, @Flogger, @CustomLog
+@Data
+@Builder
+@SuperBuilder
+@Singular
+@Delegate
+@Value
+@Accessors
+@Wither
+@With
+@SneakyThrows
+@val
+@var
+experimental @var
+@UtilityClass
+Lombok config system
+Code inspections
+Refactoring actions (lombok and delombok)"/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/mplushnikov/lombok-intellij-plugin"/>
+            <column name="featured" value="1"/>
+            <column name="github_data_id" value="15"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="4"/>
+            <column name="total_score" value="15"/>
+            <column name="total_voters" value="4"/>
+            <column name="upload_date" value="2021-12-09"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="9"/>
+            <column name="name" value="Symfony Support"/>
+            <column name="ide_id" value="3"/>
+            <column name="creator_id" value="4"/>
+            <column name="description" value="Support for Symfony framework / components."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/Haehnchen/idea-php-symfony2-plugin"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="9"/>
+            <column name="status_id" value="1"/>
+            <column name="download_count" value="0"/>
+            <column name="total_score" value="0"/>
+            <column name="total_voters" value="0"/>
+            <column name="upload_date" value="2021-12-10"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="10"/>
+            <column name="name" value="NUnit 3 Test Adapter"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="5"/>
+            <column name="description" value="The NUnit3TestAdapter extension works with the Visual Studio Unit Test window to allow integrated test execution under Visual Studio 2012 and newer."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/nunit/nunit3-vs-adapter"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="10"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="0"/>
+            <column name="total_score" value="6"/>
+            <column name="total_voters" value="3"/>
+            <column name="upload_date" value="2021-12-10"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="11"/>
+            <column name="name" value="Viasfora"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="5"/>
+            <column name="description" value="The Viasfora extension adds many useful features for code (C#, C/C++, JS, VB, F#, SQL, TypeScript, Python, PowerShell, R, JSON, Fortran) as well as editing XML files."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/tomasr/viasfora"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="11"/>
+            <column name="status_id" value="1"/>
+            <column name="download_count" value="0"/>
+            <column name="total_score" value="0"/>
+            <column name="total_voters" value="0"/>
+            <column name="upload_date" value="2021-12-10"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="12"/>
+            <column name="name" value="FileEncoding"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="5"/>
+            <column name="description" value="It''s a Visual Studio Extension, show text file encoding at editor right bottom corner, click button to convert encoding."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/genrwoody/vs_file_encoding"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="12"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="0"/>
+            <column name="total_score" value="6"/>
+            <column name="total_voters" value="3"/>
+            <column name="upload_date" value="2021-12-10"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="13"/>
+            <column name="name" value="C/C++ for Visual Studio Code"/>
+            <column name="ide_id" value="4"/>
+            <column name="creator_id" value="9"/>
+            <column name="description" value="The C/C++ extension adds language support for C/C++ to Visual Studio Code, including features such as IntelliSense and debugging."/>
+            <column name="image"/>
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/Microsoft/vscode-cpptools"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="13"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="66"/>
+            <column name="total_score" value="20"/>
+            <column name="total_voters" value="5"/>
+            <column name="upload_date" value="2021-12-10"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="14"/>
+            <column name="name" value="Golang"/>
+            <column name="ide_id" value="1"/>
+            <column name="creator_id" value="9"/>
+            <column name="description" value="This plugin extends IntelliJ IDEA Ultimate with Go-specific coding assistance and tool integrations, and has everything you could find in GoLand. "/>
+            <column name="image"/>
+            <column name="binary_content" />
+            <column name="origin_link" value="https://github.com/go-lang-plugin-org/go-lang-idea-plugin"/>
+            <column name="featured" value="1"/>
+            <column name="github_data_id" value="14"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="6"/>
+            <column name="total_score" value="15"/>
+            <column name="total_voters" value="3"/>
+            <column name="upload_date" value="2021-12-09"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="15"/>
+            <column name="name" value="Snyk Vulnerability Scanner"/>
+            <column name="ide_id" value="4"/>
+            <column name="creator_id" value="8"/>
+            <column name="description" value="Snyk’s Vulnerability Scanner provided by Snyk.io helps you find and fix security vulnerabilities and code quality issues in your projects. Within a few seconds, the extension will provide a list of all the different types of issues identified, together with actionable fix advice:
+
+Open Source Security - known vulnerabilities in both the direct and in-direct (transitive) open source dependencies you are pulling into the project.
+Code Security - security weaknesses identified in your own code.
+Code Quality - code quality issues in your own code."/>
+            <column name="image" />
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/snyk/vscode-extension"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="17"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="36"/>
+            <column name="total_score" value="0"/>
+            <column name="total_voters" value="0"/>
+            <column name="upload_date" value="2021-12-11"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="16"/>
+            <column name="name" value="Dendron"/>
+            <column name="ide_id" value="4"/>
+            <column name="creator_id" value="8"/>
+            <column name="description" value="The hierarchical note taking tool that grows as you do.
+
+Dendron is an open-source, local-first, markdown-based, note-taking tool built on top of VSCode. Like most such tools, Dendron supports all the usual features you would expect like tagging, backlinks, a graph view, split panes, and so forth. But it doesn''t stop there - whereas most tools (try to) make it easy to get notes in, they tend to make it hard to get them back out later, and it only gets worse as you add more notes. Dendron helps you get notes back out and works better the more notes you have."/>
+            <column name="image" />
+            <column name="binary_content" />
+            <column name="origin_link" value="https://github.com/dendronhq/dendron"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="18"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="35"/>
+            <column name="total_score" value="6"/>
+            <column name="total_voters" value="3"/>
+            <column name="upload_date" value="2021-12-11"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="17"/>
+            <column name="name" value="Php Inspections"/>
+            <column name="ide_id" value="3"/>
+            <column name="creator_id" value="8"/>
+            <column name="description" value="This plugin is an open-source Static Code Analyzer for PHP (aka inspections in JetBrains IDEs).
+
+It covers:
+- architecture related issues
+- weak types control and possible code construct simplifications
+- performance issues
+- non-optimal, duplicate and suspicious if conditions
+- validation of magic methods usage
+- regular expressions
+- compatibility issues
+- variety of time-consuming bugs
+- PHPUnit API usage
+- security issues"/>
+            <column name="image"/>
+            <column name="binary_content"/>
+            <column name="origin_link" value="https://github.com/kalessil/phpinspectionsea"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="19"/>
+            <column name="status_id" value="2"/>
+            <column name="download_count" value="25"/>
+            <column name="total_score" value="6"/>
+            <column name="total_voters" value="3"/>
+            <column name="upload_date" value="2021-12-11"/>
+        </insert>
+        <insert tableName="addons">
+            <column name="id" value="18"/>
+            <column name="name" value="EF Core Power Tools"/>
+            <column name="ide_id" value="2"/>
+            <column name="creator_id" value="7"/>
+            <column name="description" value="Useful design-time DbContext features, added to the Visual Studio Solution Explorer context menu.
+
+When right-clicking on a C# project, the following context menu functions are available:
+
+Reverse Engineer - Generates POCO classes, derived DbContext and mappings for an existing SQL Server, SQLite, Postgres, MySQL, or Oracle database, a SQL Server Database project or a .dacpac file. Offers an advanced UI for selecting database objects, including views, stored procedures and functions, and preserves all options in a configuration file.
+
+Migrations Tool - Manage EF Core Migrations in the project, get migration status, add migration and update the database to keep your model and database in sync.
+
+Add DbContext Model Diagram - Adds a DGML graph from your DbContext Model.
+
+View DbContext Model DDL SQL - View the SQL CREATE script for the current Model.
+
+View DbContext Model as DebugView - View the current Model as DebugView text.
+
+Add AsDgml() extension method - Adds an extension method to generate a DGML graph from your DbContext.
+
+View Database Schema as Graph - Generates a DGML graph of your database schema, viewable in Visual Studio.
+
+About - Displays version and other diagnostic information about your Visual Studio instance"/>
+            <column name="image"/>
+            <column name="binary_content" />
+            <column name="origin_link" value="https://github.com/ErikEJ/EFCorePowerTools"/>
+            <column name="featured" value="0"/>
+            <column name="github_data_id" value="20"/>
+            <column name="status_id" value="1"/>
+            <column name="download_count" value="0"/>
+            <column name="total_score" value="0"/>
+            <column name="total_voters" value="0"/>
+            <column name="upload_date" value="2021-12-11"/>
+        </insert>
+
+        <insert tableName="addons_tags">
+            <column name="id" value="1"/>
+            <column name="addon_id" value="1"/>
+            <column name="tag_id" value="2"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="2"/>
+            <column name="addon_id" value="1"/>
+            <column name="tag_id" value="1"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="3"/>
+            <column name="addon_id" value="2"/>
+            <column name="tag_id" value="2"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="4"/>
+            <column name="addon_id" value="2"/>
+            <column name="tag_id" value="1"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="5"/>
+            <column name="addon_id" value="3"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="6"/>
+            <column name="addon_id" value="3"/>
+            <column name="tag_id" value="2"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="7"/>
+            <column name="addon_id" value="4"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="8"/>
+            <column name="addon_id" value="4"/>
+            <column name="tag_id" value="4"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="9"/>
+            <column name="addon_id" value="5"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="10"/>
+            <column name="addon_id" value="5"/>
+            <column name="tag_id" value="5"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="11"/>
+            <column name="addon_id" value="6"/>
+            <column name="tag_id" value="6"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="12"/>
+            <column name="addon_id" value="6"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="13"/>
+            <column name="addon_id" value="9"/>
+            <column name="tag_id" value="6"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="14"/>
+            <column name="addon_id" value="9"/>
+            <column name="tag_id" value="4"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="15"/>
+            <column name="addon_id" value="10"/>
+            <column name="tag_id" value="1"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="16"/>
+            <column name="addon_id" value="10"/>
+            <column name="tag_id" value="5"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="17"/>
+            <column name="addon_id" value="11"/>
+            <column name="tag_id" value="6"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="18"/>
+            <column name="addon_id" value="11"/>
+            <column name="tag_id" value="7"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="19"/>
+            <column name="addon_id" value="12"/>
+            <column name="tag_id" value="6"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="20"/>
+            <column name="addon_id" value="12"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="21"/>
+            <column name="addon_id" value="13"/>
+            <column name="tag_id" value="7"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="22"/>
+            <column name="addon_id" value="13"/>
+            <column name="tag_id" value="4"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="23"/>
+            <column name="addon_id" value="14"/>
+            <column name="tag_id" value="1"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="24"/>
+            <column name="addon_id" value="14"/>
+            <column name="tag_id" value="2"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="25"/>
+            <column name="addon_id" value="8"/>
+            <column name="tag_id" value="7"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="26"/>
+            <column name="addon_id" value="8"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="27"/>
+            <column name="addon_id" value="7"/>
+            <column name="tag_id" value="7"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="28"/>
+            <column name="addon_id" value="7"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="29"/>
+            <column name="addon_id" value="15"/>
+            <column name="tag_id" value="8"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="30"/>
+            <column name="addon_id" value="15"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="31"/>
+            <column name="addon_id" value="16"/>
+            <column name="tag_id" value="7"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="32"/>
+            <column name="addon_id" value="16"/>
+            <column name="tag_id" value="9"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="33"/>
+            <column name="addon_id" value="17"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="34"/>
+            <column name="addon_id" value="17"/>
+            <column name="tag_id" value="6"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="35"/>
+            <column name="addon_id" value="18"/>
+            <column name="tag_id" value="3"/>
+        </insert>
+        <insert tableName="addons_tags">
+            <column name="id" value="36"/>
+            <column name="addon_id" value="18"/>
+            <column name="tag_id" value="4"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

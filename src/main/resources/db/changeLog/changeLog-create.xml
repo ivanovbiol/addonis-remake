@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="ivanZ" id="1234">
+        <createTable tableName="users">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="varchar(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="phone" type="varchar(11)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="photo" type="blob"/>
+            <column name="enabled" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="admin" type="boolean" defaultValue="false"/>
+        </createTable>
+
+        <createTable tableName="ides">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(30)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="statuses">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(30)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="tags">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(30)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="github_data">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="pulls_count" type="int"/>
+            <column name="open_issues_count" type="int"/>
+            <column name="last_commit_date" type="date"/>
+            <column name="last_commit_tittle" type="varchar(1000)"/>
+        </createTable>
+
+        <createTable tableName="addons">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="ide_id" type="int">
+<!--                <constraints nullable="false"/>-->
+            </column>
+            <column name="creator_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image" type="blob"/>
+            <column name="binary_content" type="blob"/>
+            <column name="origin_link" type="varchar(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="featured" type="boolean" defaultValueBoolean="false"/>
+            <column name="github_data_id" type="int"/>
+            <column name="status_id" type="int" defaultValue="1"/>
+            <column name="download_count" type="int" defaultValue="0"/>
+            <column name="total_score" type="int" defaultValue="0"/>
+            <column name="total_voters" type="int" defaultValue="0"/>
+            <column name="upload_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="addons"
+                                 baseColumnNames="ide_id"
+                                 constraintName="addons_ides"
+                                 referencedTableName="ides"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="addons"
+                                 baseColumnNames="creator_id"
+                                 constraintName="addons_users"
+                                 referencedTableName="users"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="addons"
+                                 baseColumnNames="status_id"
+                                 constraintName="addons_statuses"
+                                 referencedTableName="statuses"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="addons"
+                                 baseColumnNames="github_data_id"
+                                 constraintName="addons_github_data"
+                                 referencedTableName="github_data"
+                                 referencedColumnNames="id"/>
+
+        <createTable tableName="addons_tags">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="addon_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tag_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="addons_tags"
+                                 baseColumnNames="tag_id"
+                                 constraintName="addons_tags_tags_pk"
+                                 referencedTableName="tags"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="addons_tags"
+                                 baseColumnNames="addon_id"
+                                 constraintName="addons_tags_addons_fk"
+                                 referencedTableName="addons"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
