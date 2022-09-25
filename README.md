@@ -1,5 +1,5 @@
 
-# This repository contains refactored Bgiackend of the addonis-telerik-graduate-project.
+# This repository contains refactored Backend of the addonis-telerik-graduate-project.
 (Still no front end is available)
 
 In order to start the application Docker Desktop is needed to instantiate the containers. Also, bootRun the application.
